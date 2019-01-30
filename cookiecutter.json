@@ -1,0 +1,15 @@
+{
+    "project_name": "test_proj",
+    "autodeploy_folder_name": "deploy_{{ cookiecutter.project_name }}",
+    "root_user": "root",
+    "remote_ip": "68.183.70.227",
+    "gitlab_repo_url": "git@gitlab.com:web_case/sribna-rosa-crm.git",
+    "gitlab_repo_id": "10394037",
+    "gitlab_branch": "master",
+    "gitlab_your_private_token": "eHronHXtysgFfHX6yRVU",
+    "private_ssh_key": "/home/floydya/.ssh/django_droplet",
+    "ssl": [true, false],
+    "domain": "xfloydya.top",
+    "admin_email": "email@email.com",
+    "docker_compose_yml": "docker-compose.dev.yml"
+}

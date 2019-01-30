@@ -1,0 +1,16 @@
+[Unit]
+Description=Docker Compose Application Service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/root/{{ cookiecutter.project_name }}
+ExecStartPre=/usr/bin/docker system prune -f
+ExecStart=/usr/local/bin/docker-compose -f /root/{{ cookiecutter.project_name }}/docker-compose.prod.yml up --build -d
+ExecStop=/usr/local/bin/docker-compose -f /root/{{ cookiecutter.project_name }}/docker-compose.prod.yml down
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
